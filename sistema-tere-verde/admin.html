@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Área Administrativa</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <main>
+        <a href="index.html" class="logo">
+            <div>
+                <img src="imagens/logotereverde.png" alt="logo terê verde">
+            </div>
+        </a>
+        <div class="container">
+            <div id="login-screen" class="screen active">
+                <h2>Login da Área Administrativa</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Usuário:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Entrar</button>
+                    <p id="login-message" class="message error"></p>
+                </form>
+            </div>
+
+            <div id="admin-dashboard" class="screen hidden">
+                <h2>Painel Administrativo</h2>
+                <p>Bem-vindo, <span id="admin-username"></span>!</p>
+
+                <div class="form-group">
+                    <label for="page-select">Editar Conteúdo das trilhas dos Parques:</label>
+                    <select id="page-select">
+                        <option value="pq3picos">3 Picos</option>
+                        <option value="pqmontere">Montanhas de Terê</option>
+                        <option value="pqserraorgaos">Serra dos Orgãos</option>
+                    </select>
+                </div>
+                ---
+
+                <h3 id="form-title">Adicionar Novo Item</h3>
+                <form id="add-edit-item-form">
+                    <input type="hidden" id="item-id-to-edit">
+
+                    <div class="form-group">
+                        <label for="item-title">Título do Item:</label>
+                        <input type="text" id="item-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="item-description">Descrição do Item:</label>
+                        <textarea id="item-description" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" id="submit-item-button">Adicionar Item</button>
+                    <button type="button" id="cancel-edit-button" class="hidden">Cancelar Edição</button>
+                    <p id="add-item-message" class="message success"></p>
+                </form>
+
+                <h3>Itens Atuais da Página Selecionada</h3>
+                <ul id="current-items-list">
+                </ul>
+                <button id="logout-button">Sair</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
