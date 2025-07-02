@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*configurações gerais do site*/
+body{
+    background-image: url(imagens/fundoserra.jpeg);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+/*logo do site*/
+.logo img{
+    display: flex;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 80px;
+    height: 80px;    
+}
+
+/*configurações internas da área de admin*/
+.container {
+    padding: 50px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255 ,0.5) ;
+}
+/*tela de background*/
+.screen {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.screen.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.screen.active {
+    display: block;
+    opacity: 1;
+}
+/*Títulos secundário e primários*/
+h2, h3 {
+    text-align: center;
+    color: rgb(55, 91, 30);
+    margin-bottom: 25px;
+}
+
+.form-group {    
+    margin-bottom: 10px;   
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+/*input de credenciais*/
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+/*botão*/
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(55, 91, 30);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#logout-button {
+    background-color: #dc3545;
+    margin-top: 20px;
+}
+
+#logout-button:hover {
+    background-color: #c82333;
+}
+
+.message {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+/*menssagem de erro*/
+.message.error {
+    color: #721c24;   
+}
+/*mensagem de acerto*/
+.message.success {
+    color: #155724;
+}
+
+#current-items-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 200px; 
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+#current-items-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+/*área de alguma coisa*/
+#current-items-list li:last-child {
+    margin-bottom: 0;
+}
+
+#current-items-list button {
+    width: auto;
+    padding: 5px 10px;
+    background-color: #ffc107;
+    color: #333;
+    font-size: 0.9em;
+}
+
+#current-items-list button:hover {
+    background-color: #e0a800;
+}
+
+#cancel-edit-button {
+    background-color: #6c757d; 
+    margin-top: 10px; 
+}
+
+#cancel-edit-button:hover {
+    background-color: #5a6268;
+}
+
+/*área escondida*/
+.hidden {
+    display: none !important; 
+}
+/*área visível*/
+.visible {
+    display: block !important;
+}
+
+#current-items-list button {
+    margin-left: 10px; 
+}
+
+/*botão de edição*/
+.edit-button {
+    background-color: #ffc107; 
+    color: #333;
+    width: auto;
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}

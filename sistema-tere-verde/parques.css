@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*corpo do site*/
+body{
+    overflow-x: hidden;
+    background-image: url(imagens/fundoserra.jpeg);
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+
+/*background do cabeçalho*/
+.top-bar{
+    width: 100%;   
+    background-color: rgba(118, 77, 12, 0.669);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+/*Informação de todo cabeçalho*/
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*logo do site*/
+.logo img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 20%;
+    margin-left: 0.625rem;
+}
+/*barra de pesquisa*/
+.search-bar{
+    flex-grow: 1;
+    margin: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search-bar input{
+    width: 85%;
+    padding: 0.5rem;
+    border-radius: 0.625rem;
+    border: none;
+    font-size: 1.25rem;
+    background-color: rgb(255, 255, 255, 0.6);
+    color: rgb(0, 0, 0);
+    box-shadow: 0.625rem 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+    top: 3rem;
+    left: 110px;
+    position: absolute;
+    
+}
+
+.search-results {
+    margin-top: 2rem;
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-results li {
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.2s ease;
+}
+
+.search-results li:hover {
+    background-color: #f3f4f6;
+}
+
+.search-results li a {
+    display: block;
+    color: #047857;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.search-results li a:hover {
+    text-decoration: underline;
+}
+
+.search-results li p {
+    color: #4b5563;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search-results p {
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+/*Botão de login*/
+.login-button{
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.25rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    transition: 0.3s;
+
+}
+
+.login-button:hover{
+    background-color: rgb(233, 233, 233);
+    color: rgb(0, 0, 0);
+}
+/*Área de navegação*/
+.second-bar{
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: rgba(7, 85, 20, 0.651 );
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.625rem 0;
+    font-family: sans-serif;
+    font-size: 1rem;
+    display: flex;
+    list-style: none;
+}
+
+.second-bar a{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.3rem 0.75rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+}
+
+.second-bar a:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/*Entradas de redirecionamento*/
+.drop-menu {
+    display: none;
+    position: absolute; 
+    background-color: rgb(118, 77, 12, 0.8); 
+    min-width: 160px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    z-index: 1; 
+    list-style: none; 
+    padding: 0;
+    margin-top: 0;
+}
+
+
+.drop-menu li a {
+    color: white; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; 
+    text-align: left; 
+    white-space: nowrap; 
+}
+
+
+.drop-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+
+
+.drop-filho:hover .drop-menu {
+    display: block;
+}
+
+
+.drop-filho {
+    position: relative; 
+    display: inline-block; 
+
+}
+.drop-filho > a {
+    display: block; 
+    padding: 14px 16px; 
+}
+/*Primeiro artigo do site*/
+.pqserraorgaos-separator{
+    width: 100%;
+    height: 100%;
+    align-content: right;
+    color: rgb(255, 255, 255);
+    font-size: clamp(10px, 5vw, 20px);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    text-align: left;
+    word-wrap: break-word;
+}
+/*Título geral*/
+h1{
+  background-color: rgb(55, 91, 30 );
+  width: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 15px;
+
+}
+/*Títulos secundários*/
+h2 {
+  background-color: rgb(55, 91, 30);
+  width: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+/*Título terciário*/
+h3{
+  color: rgb(0, 255, 0);
+  font-weight: bold;
+  font-size: clamp(16px, 2.5vw, 20px);
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/*Foto de apresentação da página*/
+.pqserraorgaos-image {
+  width: 100%;
+  max-width: 32%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.pqserraorgaos-image:hover {
+  transform: scale(1.03);
+}
+/*Formatador de artigos sem imagem*/
+.psemimagem-separator {
+  margin-top: 20px;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  font-size: clamp(10px, 5vw, 15px);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.psemimagem-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 1.6;
+  text-align: justify;
+  font-size: clamp(14px, 2vw, 18px);
+  max-width: 1155px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*formatador geral de artigos*/
+.artigo {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/*Formatador de fotos dos artigos*/
+.galeria-acesso {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeria-acesso img{
+  height: auto;
+}
+/*Formatador de fotos*/
+.parnaso-img {
+  width: 100%;
+  max-width: 32%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.parnaso-img:hover {
+  transform: scale(1.03);
+}
+/*Formatador de parágrafos*/
+p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/*Formata pra deixar partes importantes em destaque*/
+.artigo-container strong {
+  color: rgb(0, 255, 0);
+  font-weight: bold;
+  font-size: clamp(16px, 2.5vw, 20px);
+  margin-right: 10px;
+}
+
+/* formatador geral de artigos */
+.artigo-separator {
+  margin-top: 20px;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  font-size: clamp(10px, 5vw, 15px);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+/* Formatador interno de artigos */
+.artigo-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+}
+/* Fromatador de parágrafos dentro de artigos */
+.artigo-container p {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 1.6;
+  text-align: justify;
+  font-size: clamp(14px, 2vw, 18px);
+  max-width: 1155px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+a{
+    color: white;
+}
+
+/*Rodapé*/
+.footer-content{
+    background-color: rgba(255, 255, 255);
+    color: rgb(55, 91, 30);
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(10px, 5vw, 20px);
+}
+/*redes sociais 100% relacionadas com o site*/
+.social-media a{
+    text-decoration: none;
+    color: rgb(0, 255, 0);
+    margin: 0 10px;
+}
+/*Configurações de responsividade*/
+@media (max-width:1340px ) {
+    .search-bar input{
+        width: 80%;
+    }
+}
+
+@media (max-width:1030px ) {
+    .search-bar input{
+        width: 70%;
+    }
+}
+
+@media (max-width:680px ) {
+    .search-bar input{
+        width: 60%;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+}
+
+@media (max-width: 490px) {
+    .welcome {
+        margin-top: 15rem;
+    }
+    .body {
+        background-image: url(imagens/fundoserra.jpeg);
+        background-attachment: local;
+    }
+    .second-bar a{
+        padding: 0.2rem 0.1rem;
+        font-size: 1rem;
+    }
+    .logo img{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 20%;
+        margin-left: 0.4rem;
+    }
+    .search-bar input{
+        top: 20px;
+        left: 60px;
+        width: 45%;
+        position: absolute;
+    }
+    .login-button{
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        margin-right: 0.5rem;
+        margin-top: 0.4rem;
+        
+    }
+}
